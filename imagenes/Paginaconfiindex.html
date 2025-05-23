@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación Iglesia Santa Rosa - Los Andes</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.7;
+            background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhV7C7YavFE2adCqNd91plKfq9oXHOChpzrVggukSycu306Ltu7KufMoI-NuBOTuRL709fV9oRm-lBHi1DZsz6TCOZkWcs7wByexItv6ThzYWM2mEvCtSSXI86HTKGnGS5fq9FpuZfRXRU/s1600/IMG_4878.JPG'); /* Reemplazar con la URL de la imagen */
+            background-size: cover; /* Cubre todo el fondo */
+            background-position: center; /* Centra la imagen */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+        }
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.75); /* Fondo blanco con opacidad */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: transparent; /* Fondo transparente para el encabezado */
+            border-bottom: 1px solid #ddd;
+        }
+        header h1 {
+            color: #800080;
+            margin-bottom: 5px;
+            font-size: 2.2em;
+        }
+        header h2 { /* Estilo para el subtítulo principal, que ahora es el de la lectura */
+            color: #555;
+            font-size: 1.4em;
+            font-weight: normal;
+            margin-top: 5px; /* Añadido para separar del h1 */
+            margin-bottom: 5px; /* Añadido para separar del h3 */
+        }
+        header h3 { /* Estilo para el nombre de la iglesia */
+            color: #666; /* Un gris un poco más oscuro que el h2 */
+            font-size: 1.2em;
+            font-weight: normal;
+            margin-top: 0;
+        }
+        nav {
+            background-color: #800080; /* Fondo morado para la navegación */
+            padding: 10px 0;
+            text-align: center;
+            border-radius: 5px; /* Bordes redondeados para la navegación */
+            margin-bottom: 20px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block; /* Para centrar la lista */
+        }
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px; /* Más espacio entre los elementos del menú */
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em; /* Tamaño de fuente más grande para los enlaces */
+            transition: color 0.3s ease; /* Transición suave para el color del enlace */
+        }
+        nav ul li a:hover {
+            color: #FFDB58; /* Dorado al pasar el mouse, para contraste */
+        }
+        section {
+            margin-bottom: 30px; /* Más espacio entre secciones */
+        }
+        section h2 {
+            color: #800080; /* Morado para los títulos de sección */
+            text-align: center;
+            margin-bottom: 20px; /* Espacio antes del contenido de la sección */
+            font-size: 1.8em; /* Tamaño de fuente más grande para los títulos de sección */
+            border-bottom: 2px solid #ddd; /* Subrayado para los títulos de sección */
+            padding-bottom: 10px;
+        }
+        section p {
+            text-align: justify; /* Justifica el texto para una apariencia más limpia */
+        }
+        .important-info {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-left: 4px solid #800080; /* Barra lateral morada para destacar */
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .important-info h3 {
+            color: #800080;
+            margin-bottom: 10px;
+            font-size: 1.2em; /* Aumenta el tamaño del título */
+        }
+        .important-info ul {
+            list-style-type: disc; /* Estilo de lista con viñetas */
+            padding-left: 20px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #777;
+            font-size: 0.9em; /* Tamaño de fuente más pequeño para el pie de página */
+            padding: 10px 0;
+            border-top: 1px solid #ddd; /* Línea separadora en la parte superior del pie de página */
+        }
+        
+        /* Estilos para la sección de la galería de fotos */
+        #galeria-fotos {
+            text-align: center;
+        }
+        #galeria-fotos h2 {
+            margin-bottom: 20px;
+        }
+        .galeria-imagenes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .galeria-imagenes img {
+            width: 200px;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease; /* Movida la transición aquí */
+        }
+        .galeria-imagenes img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Estilos para la sección de video */
+        #video-informativo {
+            text-align: center; /* Centra el título de la sección y el video si es un elemento en línea o bloque en línea */
+        }
+        #video-informativo h2 {
+            margin-bottom: 20px;
+        }
+        .video-container { /* Contenedor para hacer el video responsivo */
+            position: relative;
+            padding-bottom: 56.25%; /* Proporción 16:9 (dividir 9 por 16 = 0.5625) */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000; /* Fondo negro mientras carga el video */
+            margin: 0 auto; /* Centra el contenedor del video si tiene un ancho máximo */
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0; /* Quita el borde del iframe */
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                margin: 10px auto;
+                padding: 15px;
+            }
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+            nav ul li a {
+                font-size: 1em;
+            }
+            header h1{
+                font-size: 1.8em;
+            }
+            header h2{ /* Ajuste para el subtitulo de la lectura */
+                font-size: 1.2em;
+            }
+            header h3{ /* Ajuste para el nombre de la iglesia */
+                font-size: 1.0em;
+            }
+            section h2{
+                font-size: 1.4em;
+            }
+            .galeria-imagenes img {
+                width: 150px; /* Imágenes más pequeñas en móviles */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Confirmacion Santa Rosa</h1>
+            <h2>Primera Lectura (Hechos 4,32-37)</h2> <h3>Iglesia Santa Rosa de Los Andes, Chile</h3> </header>
+
+        <nav>
+            <ul>
+                <li><a href="#informacion-general">Información General</a></li>
+                <li><a href="#preparacion">Preparación</a></li>
+                <li><a href="#ceremonia">Ceremonia</a></li>
+                <li><a href="#galeria-fotos">Galería de Fotos</a></li>
+                <li><a href="#video-informativo">Video</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <section id="informacion-general">
+            <h2>Información General</h2>
+            <p>¡Bienvenidos a la página de confirmación de la Iglesia Santa Rosa de Los Andes! Aquí encontrarán toda la información relevante sobre el sacramento de la Confirmación en nuestra comunidad parroquial.</p>
+            <p>La Confirmación es un sacramento importante en la vida cristiana, a través del cual los bautizados son fortalecidos por el Espíritu Santo para que sean testigos de Jesucristo en el mundo.  Este sacramento completa la iniciación cristiana y nos une más íntimamente a la Iglesia.</p>
+        </section>
+
+        <section id="preparacion">
+            <h2>Preparación para la Confirmación 2025</h2>
+            <p>La preparación para recibir el sacramento de la Confirmación es un tiempo de crecimiento en la fe y de profundización en el conocimiento de la Palabra de Dios y de las enseñanzas de la Iglesia.  Es un camino de encuentro con Cristo y de discernimiento vocacional.</p>
+            <div class="important-info">
+                <h3>Requisitos y Proceso:</h3>
+                <ul>
+                    <li>Ser bautizado y haber recibido la Primera Comunión (generalmente).</li>
+                    <li>Participar en las catequesis de preparación (horarios y fechas se informarán oportunamente).</li>
+                    <li>Asistir a retiros espirituales y encuentros formativos.</li>
+                    <li>Participar activamente en la vida de la comunidad parroquial.</li>
+                    <li>Entrevista con el sacerdote o catequista.</li>
+                </ul>
+                <p>Por favor, manténganse atentos a los anuncios parroquiales para conocer las fechas de inicio de las catequesis y los plazos de inscripción.  No duden en acercarse a la secretaría parroquial para resolver sus dudas.</p>
+            </div>
+        </section>
+
+        <section id="ceremonia">
+            <h2>Sobre la Ceremonia de Confirmación</h2>
+            <p>La ceremonia de la Confirmación es un momento solemne y lleno de gracia. El obispo (o un sacerdote delegado) impondrá las manos sobre los confirmandos y los ungirá con el Santo Crisma, sellándolos con el don del Espíritu Santo.</p>
+            <p>Durante la ceremonia, los padrinos o madrinas acompañarán a los confirmandos, siendo testigos de su fe y comprometiéndose a apoyarlos en su vida cristiana.  Es tradición elegir padrinos que sean ejemplos de vida cristiana y que puedan guiar a los confirmandos en su camino de fe.</p>
+            <p>Se informará con anticipación la fecha, hora y lugar exactos de la ceremonia.  Se recomienda a los confirmandos y sus familias llegar con tiempo para prepararse adecuadamente para este importante momento.</p>
+        </section>
+
+        <section id="galeria-fotos">
+            <h2>Galería de Fotos</h2>
+            <div class="galeria-imagenes">
+                <img src="https://scontent.fscl14-1.fna.fbcdn.net/v/t39.30808-6/487320079_652736377451539_7206335105481176611_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeG6UtTuIV4aDLP0dqihAkjGMDM5BhmKwDQwMzkGGYrANGsObrNLQTsQEio7C2Ygp_ySKyR61Q2PLZSLW5JK9fVp&_nc_ohc=Tx4uDxhBkmgQ7kNvwF_-4lb&_nc_oc=AdmyAnyEzKOq7ZPp7cjHFURv0FiRquyHfGnbOJwkRG_p9jeMcYKxqvu5ZMTvkGpcyZQ&_nc_zt=23&_nc_ht=scontent.fscl14-1.fna&_nc_gid=ISL_9DNqdpZ_YV3LCRVoLg&oh=00_AfLAeOVg_2QxQSrinji7i3RpsLmbUa42eWbUitxNAHfKMg&oe=682B1D99" alt="Jóvenes en preparación para la confirmación">
+                <img src="https://scontent.fscl14-1.fna.fbcdn.net/v/t39.30808-6/486354924_652736534118190_6735393696220830383_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEd2clwCtAfqe88cyhl1KMT0rMebghaF57Ssx5uCFoXnhFiRJ-XuPeJFazmK_MldK3T_Zel0On9sWMmd69Ek2K6&_nc_ohc=BwVPmjtM2usQ7kNvwHS3-Xk&_nc_oc=Adme1h7_e0qOyoYaneR0j3LInhA9cNSMZk8p3FAuXxzpJl-PSoAXtJxq4c3DEwnbUpo&_nc_zt=23&_nc_ht=scontent.fscl14-1.fna&_nc_gid=guIZULjno5xHZuimpMM-ug&oh=00_AfLOeZCtk-l_7qC_QZSiteEYoanriKAirK_CsMr2h980Tw&oe=682B2794" alt="Ceremonia de confirmación anterior">
+                <img src="URL_DE_LA_FOTO_3" alt="Descripción de la foto 3">
+                <img src="URL_DE_LA_FOTO_4" alt="Descripción de la foto 4">
+            </div>
+        </section>
+
+        <section id="video-informativo">
+            <h2>Video Informativo sobre la Confirmación</h2>
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/URL_DEL_VIDEO" 
+                    title="Video informativo sobre la Confirmación" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p style="margin-top: 15px;">Este video ofrece una breve explicación sobre la importancia y el significado del sacramento de la Confirmación.</p>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto y Redes Sociales</h2>
+            <p>Para cualquier consulta o para inscribirse en la preparación para la Confirmación, pueden comunicarse con nosotros a través de los siguientes medios:</p>
+            <ul>
+                <li><strong>Secretaría Parroquial:</strong> [Número de teléfono de la parroquia]</li>
+                <li><strong>Correo Electrónico:</strong> [jovenesconfirmacionsantarosa@gmail.com]</li>
+                <li><strong>Dirección:</strong> [Sta. Rosa 339, 2100426 Los Andes, Valparaíso]</li>
+                <li><strong>Instagram:</strong> [Enlace al sitio web de la parroquia, si tienen]</li>
+            </ul>
+            <p>¡Estamos a su disposición para ayudarles en este importante paso de su vida de fe!</p>
+        </section>
+
+        <footer>
+            <p>© 2025 Iglesia Santa Rosa de Los Andes. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>
